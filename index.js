@@ -11,12 +11,12 @@ const client = new CommandoClient({
 
 client.on('ready', () => {
   console.clear();
-  console.log("Now Online.");
-  console.log(`Watching over ${client.users.cache.size} Users`)
+  console.log("Bot now online");
+  console.log(`Watching over ${client.users.cache.size} Users in ${client.guilds.cache.size} servers`)
   client.user.setActivity("for v!wiki", {
     type: "WATCHING"
     });
-})
+});
 
 client.registry
   .registerDefaultTypes()

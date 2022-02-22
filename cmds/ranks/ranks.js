@@ -58,6 +58,6 @@ module.exports = class DonorRanksCommand extends Command {
           rlp5Embed,
           rlp6Embed,
           ];
-          paginationEmbed(message, pages);
+          paginationEmbed(message, pages, ['⬅️', '➡️']);
       };
 };

@@ -22,8 +22,8 @@ module.exports = class EconomyCommand extends Command {
         .addField('Auctions', 'Auction items for a specific amount of time and money. \n Check out `v!auctions` for the list of commands')
         .addField('Player Shops', 'Ability to buy/sell items, shops can be rentedd for __30 days__. \n Check out `v!playershops` for more information.')
         .addField('Market', 'Ability to buy/sell items, purchase unique, exclusive, and common items.')
-        .addField('Lottery', '')
-        .addField('Trading', '')
+        .addField('Lottery', 'tbd')
+        .addField('Trading', 'tbd')
         .setFooter('Vivacity', 'https://media.discordapp.net/attachments/891832347270451230/944747687897624576/i06wAAAABJRU5ErkJggg.png');
         message.say(economyEmbed)
       

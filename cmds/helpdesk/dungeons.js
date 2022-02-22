@@ -56,6 +56,6 @@ module.exports = class DungeonsCommand extends Command {
           dungp4Embed,
           dungp5Embed,
           ];
-          paginationEmbed(message, pages);
+          paginationEmbed(message, pages, ['⬅️', '➡️']);
     }
 };
