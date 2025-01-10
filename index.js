@@ -1,7 +1,8 @@
 const { CommandoClient } = require('discord.js-commando');
+const express = require('express');
 const Discord = require('discord.js')
 const path = require('path');
-const keep_alive = require('./keep_alive.js')
+const app = express();
 
 const client = new CommandoClient({
   commandPrefix: "v!",
@@ -12,7 +13,7 @@ const client = new CommandoClient({
 client.on('ready', () => {
   console.clear();
   console.log("Bot now online");
-  console.log(`Watching over ${client.users.cache.size} Users in ${client.guilds.cache.size} servers`)
+  console.log(`Watching over ${client.users.cache.size} users in ${client.guilds.cache.size} servers`)
   client.user.setActivity("for v!wiki", {
     type: "WATCHING"
     });
@@ -32,5 +33,13 @@ client.registry
     help: false,
   })
   .registerCommandsIn(path.join(__dirname, 'cmds'));
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.listen(3000, () => {
+  console.log('server started');
+});
 
 client.login(process.env.BOT_TOKEN);
